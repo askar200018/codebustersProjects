@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sign in</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <section class="main-section login-section">
+        <div class="logo-img">
+            <img src="img/logo.svg" alt="Gamisoft Logo">
+        </div>
+
+        <form action="send_email.html" class="form-box">
+            <h2 class="form-box__title center">Вход в систему</h2>
+            <p class="form-box__text center">
+                Введите данные полученные от вашей компании,  
+                чтобы получить доступ ко всем ресурсам сервиса Gamisoft
+            </p>
+            <div class="input-box" data-error="Неверный логин">
+                <p class="input-box__name">Логин</p>
+                <input type="text" class="input-box__input" placeholder="Введите логин" required>
+            </div>
+            <div class="input-box last-input-box" data-error="Неправильный пароль. Повторите попытку">
+                <p class="input-box__name">Пароль</p>
+                <div class="wrapper-password">
+                    <input type="password" class="input-box__input" id="myPassword" placeholder="Введите пароль" required>
+                    <span class="eye" onclick="toggleFunction()">
+                        <img id="hideEye" src="img/eye-hide.svg" alt="Hidden Eye">
+                        <img id="openEye" src="img/eye-show.svg" alt="Show Eye">
+                    </span>
+                </div>
+            </div>
+            <div class="form-box__memory">
+                <div class="checkbox-block">
+                    <input type="checkbox" class="checkbox" id="remember">
+                    <label for="remember">Запомнить меня</label> 
+                </div>
+                <div class="form-box__link center">
+                    <a href="#">Забыли пароль?</a>
+                </div>
+            </div>
+            <input type="submit" class="btn"  value="Войти">
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="language-box">
+            <div class="language-box__link active-link">
+                <a href="#">Русский</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">English (US)</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">Қазақша</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>

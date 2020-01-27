@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Password</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <section class="main-section change-section">
+        <div class="logo-img">
+            <img src="img/logo.svg" alt="Gamisoft Logo">
+        </div>
+
+        <form action="send_email.html" class="form-box">
+            <h2 class="form-box__title">Сбросить пароль</h2>
+            <div class="input-box">
+                <div class="wrapper-info">
+                    <p class="input-box__name">Новый пароль</p>
+                    <span class="more-info-icon">
+                        <img src="img/more-info.svg" alt="More Info Icon">
+                    </span>
+                    <div class="more-info-block">
+                        Имя пользователя должно состоять из букв 
+                        на латинице и цифр. Максимум 15 символов.
+                    </div>
+                </div>
+                <div class="wrapper-password">
+                    <input type="password" class="input-box__input" id="myPassword" placeholder="Введите пароль" required>
+                    <span class="eye" onclick="toggleFunction()">
+                        <img id="hideEye" src="img/eye-hide.svg" alt="Hidden Eye">
+                        <img id="openEye" src="img/eye-show.svg" alt="Show Eye">
+                    </span>
+                </div>
+            </div> 
+            <div class="input-box last-input-box">
+                <p class="input-box__name">Повторите пароль</p>
+                <div class="wrapper-password">
+                    <input type="password" class="input-box__input" id="myPassword2" placeholder="Введите пароль" required>
+                    <span class="eye" onclick="toggleFunction2()">
+                        <img id="hideEye2" src="img/eye-hide.svg" alt="Hidden Eye">
+                        <img id="openEye2" src="img/eye-show.svg" alt="Show Eye">
+                    </span>
+                </div>
+            </div>
+            <input type="submit" class="btn" placeholder="Отправить">
+            <div class="arrow-back">
+                <a href="send_email.html"><img src="img/arrow-left.svg" alt="Arrow to back page"></a>
+            </div>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="language-box">
+            <div class="language-box__link active-link">
+                <a href="#">Русский</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">English (US)</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">Қазақша</a>
+            </div>
+        </div>
+    </footer>
+    <!-- <script src="js/main.js"></script> -->
+    <script>
+        function toggleFunction(){
+            var x = document.getElementById("myPassword");
+            var y = document.getElementById("hideEye");
+            var z = document.getElementById("openEye");
+
+            if(x.type === 'password'){
+                x.type = "text";
+                z.style.display = 'block';
+                y.style.display = 'none';
+            }else {
+                x.type = 'password';
+                z.style.display = 'none';
+                y.style.display = 'block';
+            }
+        }
+        function toggleFunction2(){
+            var x = document.getElementById("myPassword2");
+            var y = document.getElementById("hideEye2");
+            var z = document.getElementById("openEye2");
+
+            if(x.type === 'password'){
+                x.type = "text";
+                z.style.display = 'block';
+                y.style.display = 'none';
+            }else {
+                x.type = 'password';
+                z.style.display = 'none';
+                y.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

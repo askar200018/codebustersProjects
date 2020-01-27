@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send Email</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <section class="main-section pass-section">
+        <div class="logo-img">
+            <img src="img/logo.svg" alt="Gamisoft Logo">
+        </div>
+
+        <form action="index.html" class="form-box">
+            <h2 class="form-box__title">Подтверждение номера</h2>
+            <p class="form-box__text">
+                На номер <span class="phone-number">+7 747 712  87  36</span> отправлен 
+                код подтверждения, введите его ниже, чтобы восстановить пароль
+            </p>
+            <div class="inputs-row">
+                <div class="wrapper-input" data-error="Неверный код подтверждения">
+                    <input type="text" class="input-box__input" placeholder="1  2  2  4">
+                </div>
+                <div class="wrapper-input">
+                    <input type="submit" class="btn" placeholder="Отправить">
+                </div>
+            </div>  
+            <div class="secondary-link">
+                <a href="#">Отправить повторно (0:00)</a>
+            </div>
+            <div class="arrow-back">
+                <a href="sign.html"><img src="img/arrow-left.svg" alt="Arrow to bakc page"></a>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="language-box">
+            <div class="language-box__link active-link">
+                <a href="#">Русский</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">English (US)</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">Қазақша</a>
+            </div>
+        </div>
+    </footer>
+    
+
+    <script src="js/main.js"></script>
+</body>
+</html>

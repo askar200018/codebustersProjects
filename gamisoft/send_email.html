@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Send Email</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+
+    <section class="main-section email-phone">
+        <div class="logo-img">
+            <img src="img/logo.svg" alt="Gamisoft Logo">
+        </div>
+
+        <form action="index.html" class="form-box">
+            <h2 class="form-box__title">Сбросить пароль</h2>
+            <p class="form-box__text">
+                Введите адрес электронной почты или номер телефона к которому 
+                привязан ваш аккаунт. Мы вышлем ссылку для смены пароля.
+            </p>
+            <div class="radio-group">
+                <label class="radio" onclick="showMail()">
+                    <input type="radio" value="email" name="contact" checked>
+                    E-mail
+                    <span></span>
+                </label>
+                <label class="radio" onclick="showPhone()">
+                    <input type="radio" value="phone" name="contact">
+                    Номер телефона
+                    <span></span>
+                </label>
+            </div>
+            <div class="input-box username-box" id="mail" data-error="Неправильный пароль. Повторите попытку">
+                <input type="text" class="input-box__input" placeholder="Введите логин" required>
+            </div> 
+            <div class="input-box phone-box" id="phone">
+                <input type="text" class="input-box__input" placeholder="+ 7 (___) ___-__-__">
+            </div>
+            <input type="submit" class="btn" placeholder="Отправить">
+            <div class="arrow-back">
+                <a href="sign.html"><img src="img/arrow-left.svg" alt="Arrow to bakc page"></a>
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="language-box">
+            <div class="language-box__link active-link">
+                <a href="#">Русский</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">English (US)</a>
+            </div>
+            <div class="language-box__link">
+                <a href="#">Қазақша</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js" 
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script> -->
+    <script src="js/main.js"></script>
+    <script>
+        function showMail(){
+            var x = document.getElementById("mail");
+            var y = document.getElementById("phone");
+            x.style.display = "block";
+            y.style.display = "none";
+        }
+        function showPhone(){
+            var x = document.getElementById("mail");
+            var y = document.getElementById("phone");
+            x.style.display = "none";
+            y.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
